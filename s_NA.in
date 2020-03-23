@@ -1,0 +1,27 @@
+c Input file for SerraNA                              
+c Lines beginning with "c" are comment lines.
+c Always leave one empty line before entering a parameter.
+c Do not change the order of inputs.
+c------------------------------------------------------------------------------
+c Indicate if the structure to be analysed is double or single stranded
+c Write 1 for single and 2 for double.
+
+   2
+c------------------------------------------------------------------------------
+c Indicate if the structure is linear or cicular.
+c Write 1 for linear and 2 for circular
+
+   1
+c -------------------------------------------
+c Topology file. The file must be an amber topology file.                                       
+c                                          
+
+   32mer.top
+c -------------------------------------------
+c Trajectory file. The file must be an amber trajectory file.                                         
+c                                          
+
+   32mer.crd
+c
+c No more inputs to read
+c end

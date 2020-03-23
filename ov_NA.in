@@ -1,0 +1,35 @@
+c Input file for Analysis programs                        
+c Lines beginning with "c" are comment lines.
+c Always leave one empty line before entering a parameter.
+c Do not change the order of inputs.
+c------------------------------------------------------------------------------
+c Indicate ranges of Persistence lengths, Tilt and Roll.
+c You should write 4 integers: a, b, c, d
+c Default a=b=0 corresponds to considering the whole fragment.
+c Default c=d=0 corresponds to default methodology (see manual).
+
+   0, 0, 0, 0
+c------------------------------------------------------------------------------
+c Indicate ranges of Twist
+c
+
+   0, 0, 0, 0
+c------------------------------------------------------------------------------
+c Indicate ranges of Stretch
+c
+
+   0, 0, 0, 0
+c -------------------------------------------
+c Elastic parameters file (elastic_parameters.out). Note that if you analysed
+c one single snapshot with SerraNA, you won't have this file...                             
+c                                          
+
+   elastic_parameters.out
+c -------------------------------------------
+c Structural parameters file (structural_parameters.out)                                   
+c                                          
+
+   structural_parameters.out
+c
+c No more inputs to read
+c end

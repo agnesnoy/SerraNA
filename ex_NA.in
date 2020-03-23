@@ -1,0 +1,32 @@
+c Input file for Extract program                        
+c Lines beginning with "c" are comment lines.
+c Always leave one empty line before entering a parameter.
+c------------------------------------------------------------------------------
+c Path to data file (BPP.out BSP.out, structural_parameters.out, elastic_parameters.out)
+c
+
+   elastic_parameters.out
+c------------------------------------------------------------------------------
+c Indicate if you want to extract a sublength [l] by typing     :    0
+c Or if you want to get overalls from a particular region [a,b] :    1
+c Any other values different to 0 or 1 will caused an error
+c
+
+  1
+c------------------------------------------------------------------------------
+c If you typed 0, then indicate the length [l] you want to process.
+c This length must be:  0 < l < N, where N is the number of bp-steps.
+c
+c If you typed 1, then indicate the region (a,b) from which you want 
+c to extract avg+-sd as a function of length. 
+c If the structure is opened (linear DNA), then 0 < a < b < N.
+c If the structure is closed (circular DNA), then both a < b or b < a, are valid
+c since those ranges correspond to different regions along a closed structure.
+c Default a=b=0 consider all possible lengths in the whole fragment,
+c The only invalid input is a = b, if both "a" and "b" are different than 0.
+c
+
+   0,0
+c -------------------------------------------
+c No more inputs to read
+c end
