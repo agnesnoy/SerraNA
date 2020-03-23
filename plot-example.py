@@ -35,12 +35,12 @@ filedat="structural_"
 l=2 #Initial
 step=10
 for s in range(0,3):
-    newpath=filedat+str(l)+"mer.out"
+    newpath=filedat+str(l-1)+"mer.out"
     macolor = colours[s] #Our colour
 
     malabel = str(l)+"mer"
     dat = np.loadtxt(newpath)
-    axs[0].plot( dat[:,0], dat[:,column], "-o", markersize=mark_s, lw=line_w, color=macolor,label=malabel) 
+    axs[0].plot( dat[:,0]+1, dat[:,column], "-o", markersize=mark_s, lw=line_w, color=macolor,label=malabel) 
     l = l + step
 
 #Plot twist for 4 different regions [a,b]

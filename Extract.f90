@@ -108,8 +108,8 @@
 
     !Warnings!
     if (type_parm /= 4 .and. type_parm /=1 ) then !For not BPP.out
-      if (sublength < 2) stop "Error, sublength must be greater than 1"
-      if (sublength > nbp) stop "Error, sublength must not be greater than number of bps"
+      if (sublength < 1) stop "Error, sublength must be greater than 1"
+      if (sublength > nbp-1) stop "Error, sublength must not be greater than number of bps"
 
       write(6,*) "Extracting sublength", sublength
     end if
