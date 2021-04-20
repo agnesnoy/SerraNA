@@ -35,12 +35,12 @@ filedat="structural_"
 l=2 #Initial
 step=10
 for s in range(0,3):
-    newpath=filedat+str(l-1)+"mer.out"
+    newpath=filedat+str(l)+"mer.out"
     macolor = colours[s] #Our colour
 
     malabel = str(l)+"mer"
     dat = np.loadtxt(newpath)
-    axs[0].plot( dat[:,0]+1, dat[:,column], "-o", markersize=mark_s, lw=line_w, color=macolor,label=malabel) 
+    axs[0].plot( dat[:,0], dat[:,column], "-o", markersize=mark_s, lw=line_w, color=macolor,label=malabel) 
     l = l + step
 
 #Plot twist for 4 different regions [a,b]
@@ -51,7 +51,7 @@ filedat="elastic_"
 l1=6 #Length
 l2=5 #diference
 l=-l2
-for s in range(0,4):
+for s in range(1,5):
     l = l + l1
     newpath=filedat+"[" +str(l)+":"+str(l+l2)+"].out"
     macolor = colours[s] #Our colour
@@ -82,13 +82,13 @@ alpha=0.25, edgecolor=macolor, facecolor=macolor, linewidth=0)
 for s in range(0,3):
     if s == 0:
        labely="Bending angle (deg)"
-       labelx='Medium position'
+       labelx='Position along the DNA'
     elif s == 1:
        labely="Twist (nm)"
-       labelx='Sublength (bp)'
+       labelx='mer (bp)'
     elif s == 2:
        labely="Stretch (pN)"
-       labelx='Sublength (bp)'
+       labelx='mer (bp)'
 
     axs[s].set_xlabel(labelx,fontsize=label_s)
     axs[s].set_ylabel(labely,fontsize=label_s)

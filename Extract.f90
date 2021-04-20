@@ -1,4 +1,4 @@
-!						31/07/2019
+!						20/04/2021
 ! SerraNA: Extract
 ! Extracts lengths from BSP, structural or elastic parameters.
 ! It can also calculate overalls (by length) in a region [a,b]
@@ -108,7 +108,7 @@
 
     !Warnings!
     if (type_parm /= 4 .and. type_parm /=1 ) then !For not BPP.out
-      if (sublength < 1) stop "Error, sublength must be greater than 1"
+      if (sublength < 1) stop "Error, sublength must be greater than 0" !Previously 1
       if (sublength > nbp-1) stop "Error, sublength must not be greater than number of bps"
 
       write(6,*) "Extracting sublength", sublength
@@ -605,7 +605,7 @@
   if (type_ext == 0) then
 
     !Let's prepare the format before selecting a case
-    write(cl,*) sublength
+    write(cl,*) sublength+1
     cl = adjustl(cl)
 
     !What type of parameter?

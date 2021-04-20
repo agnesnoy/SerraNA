@@ -1,4 +1,4 @@
-!                                               30/09/2019
+!                                               20/04/2021
 ! SerraNA: ANALYSIS
 ! Calculates overall elastic constants
 ! and different definitions of persistence lengths
@@ -465,10 +465,10 @@
 
     if (T_n >= 21) then  !We'll consider bulk behaviour and discard 10 longest sub-lengths
       ranges_T(1,2) = 11
-      ranges_T(2,2) = A_n-10
+      ranges_T(2,2) = T_n-10
     else
       ranges_T(1,2) = 1  !Or we'll consider everything
-      ranges_T(2,2) = A_n
+      ranges_T(2,2) = T_n
     end if
 
   end if

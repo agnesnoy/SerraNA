@@ -374,6 +374,11 @@
 
  !Directional decay
  BSP(8) = dot_product(R1(:,3),R2(:,3))
+
+ !I don't know why but sometimes this happens.
+ !How can something be super straight haha...?
+ if (BSP(8) > one) BSP(8) = one
+ if (BSP(8) < -one) BSP(8) = -one
  
  !Bending, which is the angle RoltTilt or between z1 and z2
  BSP(7)=dacos(BSP(8))

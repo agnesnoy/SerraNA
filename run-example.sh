@@ -44,4 +44,9 @@ sed -i "29s/11,0/21,0/g" ex_NA.in
 #=========================================================================================
 ipython plot-example.py
 
+#Leave it as it was...
+sed -i "8s/   structural_/   elastic_/g" ex_NA.in
+sed -i "15s/0/1/g" ex_NA.in
+sed -i "29s/21,0/0,0/g" ex_NA.in
+
 echo "It is done"
