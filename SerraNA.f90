@@ -1,4 +1,4 @@
-!						31/07/2019
+!						25/08/2021
 !
 !
 ! SerraNA: MAIN
@@ -236,6 +236,8 @@
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),C_b,n,n__1,n__1_1)
       else if(seq(i) .eq. 'T') then
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),T_b,n,n__1,n__1_1)
+      else if(seq(i) .eq. 'U') then !Uracil
+        call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),U_b,n,n__1,n__1_1)
       end if
       l=l+n
     end do !close i
@@ -316,6 +318,8 @@
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),C_b,n,n__1,n__1_1)
       else if(seq(i) .eq. 'T') then
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),T_b,n,n__1,n__1_1)
+      else if(seq(i) .eq. 'U') then !Uracil
+        call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),U_b,n,n__1,n__1_1)
       end if
       l=l+n
     end do !close i
@@ -383,6 +387,8 @@
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),C_b,n,n__1,n__1_1)
       else if(seq(i) .eq. 'T') then
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),T_b,n,n__1,n__1_1)
+      else if(seq(i) .eq. 'U') then !Uracil
+        call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),U_b,n,n__1,n__1_1)
       end if
       l=l+n
     end do !close i
@@ -495,6 +501,8 @@
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),C_b,n,n__1,n__1_1)
       else if(seq(i) .eq. 'T') then
         call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),T_b,n,n__1,n__1_1)
+      else if(seq(i) .eq. 'U') then !Uracil
+        call Get_Rotation_R_Origin_O(R(:,:,i),O(:,i),coords(:,l:l+n-1,k),U_b,n,n__1,n__1_1)
       end if
       l=l+n
     end do !close i
