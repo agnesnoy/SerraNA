@@ -1,4 +1,4 @@
-!------------------------------------------------------------- 10/09/2019
+!------------------------------------------------------------- 26/08/2021
 ! This module contains functions and subroutines needed for reading
 ! and writing.
 !
@@ -249,7 +249,7 @@
   !if str=1 then its a single stranded structure. If its 2 then is double stranded
    
   !Check if molecule is longer than 4bp, if not then stop
-  if ( nbp/2 .le. 4 ) stop "Invalid DNA fragment, the fragment must be larger than 4 bp"
+  if ( nbp .le. 4 ) stop "Invalid DNA fragment, the fragment must be larger than 4 bp"
 
   !Similar loop as before but now identifying residues
   l=0 !will help us count bps
